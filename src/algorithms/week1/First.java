@@ -44,32 +44,23 @@ public class First {
 
         // 입력값 리스트
         List<String> input = new ArrayList<>();
-//        for(String s : args) {
-//            input.add(s);
-//        }
         input.add("6,5");
         input.add("5,80");
-        input.add("100,80");
-        input.add("5,50");
+//        input.add("100,80");
+//        input.add("5,50");
 
+        // 그룹별 페어링
         Pair<Integer, Integer> pairGroupA = new Pair<>(Integer.parseInt(groupA.get(0).split(",")[0]), Integer.parseInt(groupA.get(0).split(",")[1]));
         Pair<Integer, Integer> pairGroupB = new Pair<>(Integer.parseInt(groupB.get(0).split(",")[0]), Integer.parseInt(groupB.get(0).split(",")[1]));
         Pair<Integer, Integer> pairGroupC = new Pair<>(Integer.parseInt(groupC.get(0).split(",")[0]), Integer.parseInt(groupC.get(0).split(",")[1]));
 
+        // 중간값 계산
         int xOfBetweenAandB = betweenValue(pairGroupA.getKey(), pairGroupB.getKey());
         int yOfBetweenAandB = betweenValue(pairGroupA.getValue(),pairGroupB.getValue());
         int xOfBetweenBandC = betweenValue(pairGroupB.getKey(), pairGroupC.getKey());
         int yOfBetweenBandC = betweenValue(pairGroupB.getValue(), pairGroupC.getValue());
         int xOfBetweenCandA = betweenValue(pairGroupC.getKey(), pairGroupA.getKey());
         int yOfBetweenCandA = betweenValue(pairGroupC.getValue(), pairGroupA.getValue());
-
-//        System.out.println("xOfBetweenAandB >>> " + xOfBetweenAandB);
-//        System.out.println("yOfBetweenAandB >>> " + yOfBetweenAandB);
-//        System.out.println("xOfBetweenBandC >>> " + xOfBetweenBandC);
-//        System.out.println("yOfBetweenBandC >>> " + yOfBetweenBandC);
-//        System.out.println("xOfBetweenCandA >>> " + xOfBetweenCandA);
-//        System.out.println("yOfBetweenCandA >>> " + yOfBetweenCandA);
-
 
         int inputX = 0;
         int inputY = 0;
@@ -94,7 +85,7 @@ public class First {
 
     }
 
-
+    // 사이값 계산 로직
     static int betweenValue(int param1, int param2) {
         int temp = 0;
         if(param1 < param2) {
