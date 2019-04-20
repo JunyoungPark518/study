@@ -31,6 +31,7 @@ public class Second {
 
     public static void main(String[] args) {
 
+        // 기준값 정의
         List<String> groupA = new ArrayList<>();
         List<String> groupB = new ArrayList<>();
         List<String> groupC = new ArrayList<>();
@@ -38,6 +39,7 @@ public class Second {
         String input1 = "6,5";
         String input2 = "5,80";
 
+        // 입력값 정의
         List<String> inputList = new ArrayList<>();
 
         groupA.add("5,5");
@@ -47,6 +49,7 @@ public class Second {
         inputList.add(input1);
         inputList.add(input2);
 
+        // 그룹별 x, y 좌표 정의
         int xGroupA = Integer.parseInt(groupA.get(0).split(",")[0]);
         int yGroupA = Integer.parseInt(groupA.get(0).split(",")[1]);
         int xGroupB = Integer.parseInt(groupB.get(0).split(",")[0]);
@@ -58,6 +61,7 @@ public class Second {
         Pair<Integer, Integer> pairGroupB = new Pair<>(xGroupB, yGroupB);
         Pair<Integer, Integer> pairGroupC = new Pair<>(xGroupC, yGroupC);
 
+        // 기준값 페어를 그룹핑
         List<Pair> groupList = new ArrayList<>();
         groupList.add(pairGroupA);
         groupList.add(pairGroupB);
@@ -88,6 +92,7 @@ public class Second {
 
     }
 
+    // 점이 어느 기준값과의 최단거리인지 출력하는 함수
     private static String getCloserGroupId(List<Pair> groupList, Pair<Integer, Integer> dot){
         String[] groupId = {"A", "B", "C"};
         String pickId = "";
@@ -101,6 +106,7 @@ public class Second {
         return pickId;
     }
 
+    // x,y 좌표계에서 두개의 점의 수직 거리 계산
     private static double getDirectDistance(Pair<Integer, Integer> base, Pair<Integer, Integer> point){
         int xDiff = base.getKey() - point.getValue();
         int yDiff = base.getValue() - point.getValue();
