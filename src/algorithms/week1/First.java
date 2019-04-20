@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.week1;
 
 import javafx.util.Pair;
 
@@ -26,7 +26,7 @@ import java.util.List;
  *  group B = ["5,95", "5,80"]
  *  group C = ["95,50"]
  */
-public class Week1 {
+public class First {
 
     static int xmin = 0;
     static int ymin = 0;

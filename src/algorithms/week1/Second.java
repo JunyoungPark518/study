@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.week1;
 
 import javafx.util.Pair;
 
@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
  *  group B = ["5,95", "5,80"]
  *  group C = ["95,50"]
  */
-public class Week1second {
+public class Second {
 
     public static void main(String[] args) {
 
