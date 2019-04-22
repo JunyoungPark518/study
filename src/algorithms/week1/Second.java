@@ -4,7 +4,6 @@ import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 100x100 크기의 2차원 좌표계에서 주어진 3개의 값을 기준으로 n개의 입력값을 군집화하는 코드를 작성
